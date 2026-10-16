@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="A clean, modern weather dashboard with real-time weather information and forecasts.">
+
+    <title>Atmos — Weather Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <div class="app-container">
+
+        <!-- Header -->
+        <header class="app-header">
+            <a href="#" class="brand" aria-label="Atmos home">
+                <span class="brand-icon">A</span>
+                <span>ATMOS<span class="brand-dot">.</span></span>
+            </a>
+
+            <div class="header-label">
+                WEATHER INTELLIGENCE
+            </div>
+        </header>
+
+        <main>
+            <!-- Introduction and Search -->
+            <section class="hero">
+                <div class="eyebrow">
+                    <span class="status-dot"></span>
+                    YOUR WEATHER, REIMAGINED
+                </div>
+
+                <h1>Know your <span>atmosphere.</span></h1>
+
+                <p class="hero-description">
+                    Real-time conditions and forecasts, wherever life takes you.
+                </p>
+
+                <form id="search-form" class="search-form">
+                    <label for="city-input" class="visually-hidden">
+                        Search for a city
+                    </label>
+
+                    <span class="search-icon" aria-hidden="true">⌕</span>
+
+                    <input
+                        type="text"
+                        id="city-input"
+                        name="city"
+                        placeholder="Search a city..."
+                        autocomplete="off"
+                        required
+                    >
+
+                    <button type="submit" id="search-button">
+                        Explore <span aria-hidden="true">↗</span>
+                    </button>
+                </form>
+
+                <p id="status-message" class="status-message" role="status" aria-live="polite">
+                    Search for a city to discover its weather.
+                </p>
+            </section>
+
+            <!-- Current Weather -->
+            <section class="weather-section" aria-labelledby="weather-heading">
+                <div class="section-heading">
+                    <div>
+                        <p class="section-kicker">LIVE CONDITIONS</p>
+                        <h2 id="weather-heading">Current weather</h2>
+                    </div>
+
+                    <span class="live-badge">
+                        <span class="status-dot"></span>
+                        LIVE
+                    </span>
+                </div>
+
+                <article class="current-weather card" id="current-weather">
+                    <div class="weather-location">
+                        <span class="location-icon" aria-hidden="true">⌖</span>
+
+                        <div>
+                            <h3 id="city-name">Awaiting location</h3>
+                            <p id="current-date">Your local weather at a glance</p>
+                        </div>
+                    </div>
+
+                    <div class="current-weather-main">
+                        <div class="temperature-group">
+                            <p id="weather-condition" class="weather-condition">
+                                Search to begin
+                            </p>
+
+                            <div class="temperature">
+                                <span id="temperature">--</span><span class="degree">°C</span>
+                            </div>
+
+                            <p id="feels-like" class="feels-like">
+                                Feels like --
+                            </p>
+                        </div>
+
+                        <div class="weather-visual" id="weather-visual" aria-hidden="true">
+                            <span id="weather-icon">◌</span>
+                        </div>
+                    </div>
+
+                    <div class="weather-divider"></div>
+
+                    <div class="weather-metrics">
+                        <div class="metric">
+                            <span class="metric-icon" aria-hidden="true">◉</span>
+                            <div>
+                                <p>Humidity</p>
+                                <strong id="humidity">--%</strong>
+                            </div>
+                        </div>
+
+                        <div class="metric">
+                            <span class="metric-icon" aria-hidden="true">↝</span>
+                            <div>
+                                <p>Wind speed</p>
+                                <strong id="wind-speed">-- km/h</strong>
+                            </div>
+                        </div>
+
+                        <div class="metric">
+                            <span class="metric-icon" aria-hidden="true">☀</span>
+                            <div>
+                                <p>UV index</p>
+                                <strong id="uv-index">--</strong>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </section>
+
+            <!-- Forecast -->
+            <section class="forecast-section" aria-labelledby="forecast-heading">
+                <div class="section-heading">
+                    <div>
+                        <p class="section-kicker">PLAN AHEAD</p>
+                        <h2 id="forecast-heading">Five-day forecast</h2>
+                    </div>
+                </div>
+
+                <div class="forecast-grid" id="forecast-grid">
+                    <div class="forecast-placeholder card">
+                        Your upcoming forecast will appear here after you search.
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="app-footer">
+            <a href="#" class="footer-brand">ATMOS<span class="brand-dot">.</span></a>
+
+            <p>Weather, with perspective.</p>
+
+            <p class="footer-credit">
+                Built with HTML, CSS &amp; JavaScript.
+            </p>
+        </footer>
+
+    </div>
+</body>
+</html>
