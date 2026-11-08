@@ -51,4 +51,4 @@ premium visual identity.
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/YOUR-USERNAME/weather-dashboard.git
+   git clone https://github.com/xolaniziphozami-bit/weather-dashboard.git
